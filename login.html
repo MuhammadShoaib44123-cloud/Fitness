@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure login for FitLife members. Access your personalized fitness programs and track your progress.">
+    <title>FitLife - Secure Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">  <!-- Reuse existing CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FitLife</div>
+            <ul>
+                <li><a href="index.html" aria-label="Back to Home">Home</a></li>
+                <li><a href="login.html" aria-label="Login Page">Login</a></li>  <!-- Keep it for consistency -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login-section">
+        <h2>Member Login</h2>
+        <p>Access your account to continue your fitness journey. Your data is secure and private.</p>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required aria-required="true" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required aria-required="true" placeholder="Enter your password">
+            </div>
+            <button type="submit">Login</button>
+            <p><a href="#" aria-label="Forgot Password">Forgot Password?</a></p>
+         
+            <p>Don't have an account? <a href="signup.html" aria-label="Sign Up Page">Sign Up</a></p> <!-- Placeholder for sign-up page -->
+        </form>
+        <p id="login-error" style="color: red; display: none;">Invalid email or password. Please try again.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 FitLife. All rights reserved. <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="login-script.js"></script>  <!-- New script for login functionality -->
+</body>
+</html>

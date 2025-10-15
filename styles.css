@@ -1,0 +1,271 @@
+/* Global Styles */
+:root {
+    --primary-color: #007BFF; /* Professional blue */
+    --secondary-color: #28a745; /* Energetic green */
+    --accent-color: #ffc107; /* Subtle yellow accent */
+    --background-gradient: linear-gradient(to bottom, #f8f9fa, #e9ecef); /* Light, professional gradient */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: var(--background-gradient);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+}
+
+button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary-color);
+}
+
+/* Navbar */
+nav {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80') no-repeat center center/cover;
+    height: 80vh;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    flex: 1;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-image img {
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.workout-grid, .trainer-grid, .testimonial-grid, .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.workout-card, .trainer-card, .testimonial-card, .pricing-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.workout-card:hover, .trainer-card:hover, .pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.popular {
+    border: 2px solid var(--secondary-color);
+}
+
+.plan-comparison {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.plan-comparison th, .plan-comparison td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tracker-demo {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        height: auto;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .workout-grid, .trainer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ... (existing styles remain the same) */
+
+/* Login Section Styles */
+#login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+
+#login-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments for login */
+@media (max-width: 768px) {
+    #login-section {
+        margin: 20px;
+    }
+}
+/* Signup Section Styles */
+#signup-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#signup-form .form-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+#signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+#signup-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#signup-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+
+#signup-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments for signup */
+@media (max-width: 768px) {
+    #signup-section {
+        margin: 20px;
+    }
+}

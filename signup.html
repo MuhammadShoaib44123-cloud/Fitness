@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for FitLife to start your fitness journey with personalized programs and expert guidance.">
+    <title>FitLife - Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">  <!-- Reuse existing CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FitLife</div>
+            <ul>
+                <li><a href="index.html" aria-label="Back to Home">Home</a></li>
+                <li><a href="login.html" aria-label="Login Page">Login</a></li>
+                <li><a href="signup.html" aria-label="Sign Up Page">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="signup-section">
+        <h2>Create Your FitLife Account</h2>
+        <p>Join our community and take the first step toward achieving your fitness goals. Your information is secure and will only be used to enhance your experience.</p>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required aria-required="true" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required aria-required="true" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required aria-required="true" placeholder="Create a password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" required aria-required="true" placeholder="Confirm your password">
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="terms" required aria-required="true"> I agree to the <a href="#" aria-label="Terms of Service">Terms of Service</a> and <a href="#" aria-label="Privacy Policy">Privacy Policy</a>.
+                </label>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p id="signup-error" style="color: red; display: none;">Please fix the errors above.</p>
+        </form>
+        <p>Already have an account? <a href="login.html" aria-label="Login Page">Log In</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 FitLife. All rights reserved. <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="signup-script.js"></script>
+</body>
+</html>
